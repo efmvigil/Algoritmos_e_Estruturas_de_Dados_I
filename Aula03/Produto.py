@@ -1,11 +1,19 @@
 from Categoria import Categoria
 
 class Produto:
-    def __init__(self, id, nome, preco, qtd, cat = Categoria(nome="Um")):
-        self.id = id
+
+    def __init__(self, nome, preco= 10.0, qtd = 0, cat=Categoria(None)):
         self.nome = nome
         self.preco = preco
         self.qtd = qtd
-        self.categoria = cat
+        self.cat = cat
+
+
+    def __str__(self):
+        texto = "Produto: " + self.nome
+        texto += "\nPreço: " + str(self.preco)
+        texto += "\nCategoria: " + str(self.cat.nome)
+        return texto
+
 
 

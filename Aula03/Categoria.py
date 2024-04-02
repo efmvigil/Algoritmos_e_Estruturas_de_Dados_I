@@ -1,4 +1,7 @@
 class Categoria:
     def __init__(self, nome):
-       self.id = 0
+       self.id = id
        self.nome = nome
+
+    def __str__(self):
+        return "Categoria: " + self.nome
